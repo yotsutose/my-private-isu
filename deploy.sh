@@ -20,7 +20,7 @@ sudo cp etc/my.cnf /etc/mysql/my.cnf
 
 # Nginx設定ファイルをコピー
 echo "Copying Nginx configuration..."
-sudo cp etc/nginx/nginx.conf /etc/nginx/
+# sudo cp etc/nginx/nginx.conf /etc/nginx/
 sudo cp etc/nginx/conf.d/default.conf /etc/nginx/conf.d/
 
 # Golangディレクトリに移動
@@ -47,7 +47,7 @@ sudo systemctl restart nginx
 
 # MySQLのスロークエリログを有効化
 echo "Enabling MySQL slow query log..."
-sudo mysql -u root -e "SET GLOBAL slow_query_log = 'ON';"
+sudo mysql -u root -e "SET GLOBAL slow_query_log = 'ON';"P
 sudo mysql -u root -e "SET GLOBAL long_query_time = 0.0;"
 sudo mysql -u root -e "SET GLOBAL slow_query_log_file = '/var/log/mysql/slow-query.log';"
 
